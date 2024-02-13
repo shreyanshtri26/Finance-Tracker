@@ -48,19 +48,7 @@ This will open the app in your browser on http://localhost:3000
 
 ## Challenges 
 
-One challenge I faced was handling asynchronous calls to the PostgreSQL database from React components. I solved this by using async/await syntax. For example:
-
-```js
-
-const getTransactions = async () => {
-
-  const res = await pool.query('SELECT * FROM transactions');
-
-  setTransactions(res.rows); 
-
-}
-
-```
+One challenge I faced was handling asynchronous calls to the PostgreSQL database from React components. I solved this by using async/await syntax. 
 
 This allowed me to query the database and update component state once the results are returned.
 
