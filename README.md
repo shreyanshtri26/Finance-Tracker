@@ -46,18 +46,22 @@ npm run start
 
 This will open the app in your browser on http://localhost:3000
 
-## Challenges
+## Challenges 
 
-One challenge I faced was handling user authentication with React Router. I implemented protected routes and redirecting based on auth state to create a seamless user experience.
+One challenge I faced was handling asynchronous calls to the PostgreSQL database from React components. I solved this by using async/await syntax. For example:
 
-Overall, incorporating user accounts required more state management logic on the client side. But it was good experience designing real-world features like customizable accounts.
+```js
 
-## Standout Features
+const getTransactions = async () => {
 
-- User authentication with protected routes 
-- Persisting transaction history to user accounts
-- Input validation and error handling
-- Modular components and routing 
-- PostgreSQL integration
+  const res = await pool.query('SELECT * FROM transactions');
 
-Let me know if you have any other questions!
+  setTransactions(res.rows); 
+
+}
+
+```
+
+This allowed me to query the database and update component state once the results are returned.
+
+Overall, integrating a PostgreSQL database into a React app took some learning and troubleshooting. But I gained good experience with managing application state, effects, and writing async logic.
