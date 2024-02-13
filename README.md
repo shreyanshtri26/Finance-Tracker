@@ -29,7 +29,7 @@ git clone https://github.com/shreyanshtri26/Finance-Tracker.git
 2. Navigate into the project folder
 
 ```
-cd Finance-tracker
+cd Finance-Tracker
 ```
 
 3. Install dependencies
